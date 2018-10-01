@@ -1,0 +1,15 @@
+###################
+SDK 삭제
+###################
+
+Setting Tool을 통해서 설치된 Gamebase SDK를 삭제합니다.
+
+Setting Tool 실행
+===================
+
+* **Menu > Tools > TOAST > Gamebase > Setting Tool > Settings**
+
+삭제
+===================
+
+* Click **Remove**
