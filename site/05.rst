@@ -9,7 +9,12 @@ Setting Tool 실행
 
 * **Menu > Tools > TOAST > Gamebase > Setting Tool > Settings**
 
+.. image:: _static/image/unity-menu-settingtool.png
+
 삭제
 ===================
 
 * Click **Remove**
+
+.. image:: _static/image/settingtool-remove.png
+    :scale: 50%

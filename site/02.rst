@@ -18,15 +18,28 @@ TOAST를 이용한 설치
 
 2. 패키지 임포트
     - **Menu > Assets > Import Package > Custom Package**
+
+      .. image:: _static/image/menu-importpackage.png
+
     - GamebaseSettingTool_vx.x.x.unitypackage 선택
     - Click **Import**
+      
+      
 
 
 Unity Asset Store를 이용한 설치
 ==================================
 
 1. Asset Store 실행 **Menu > Window > Asset Store**
+
+    .. image:: _static/image/menu-assetstore.png
+        :scale: 70%
+
 2. 검색창엡 이용해서 **Gamebase Setting Tool** 입력해서 Setting Tool 검색
+
+    .. image:: _static/image/assetstore-settingtool.png
+        :scale: 50%
+        
 3. Click **Download**
 
   .. tip:: 

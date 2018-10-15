@@ -32,4 +32,12 @@ Gamebase SDK에서 사용하고자 하는 모듈을 선택합니다.
 
 원하는 플랫폼과 모듈을 선택했으면 Gamebase SDK를 설치합니다.
 
+가이드에서는 Android Platform, Google IdP, FCM을 선택하도록 하겠습니다.
+
+.. image:: _static/image/settingtool-setting.png
+    :scale: 50%
+
 * Click **Settings**
+* 설치 완료 후에는 Gamebase 폴더를 확인할 수 있습니다.
+
+.. image:: _static/image/setting-complete.png
