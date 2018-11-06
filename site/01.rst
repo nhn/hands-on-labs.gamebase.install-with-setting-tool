@@ -18,7 +18,13 @@ Gamebase SDK를 쉽게 설치할 수 있도록 Setting Tool을 제공하고 있�
 준비물
 ===========
 
+* Unity 계정
+
+  * `Unity 회원가입 <https://unity3d.com>`_
+
 * Unity 5.5.4 이상
+
+  * `Unity 다운로드 <https://unity3d.com/get-unity/download>`_
 
 참고 영상
 ============

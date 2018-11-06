@@ -3,13 +3,13 @@ Setting Tool 설치
 ######################
 
 Unity 프로젝트 생성
-================================
+============================================
 
 1. Unity 실행
 2. ``GamebaseSettingTool`` 이름으로 새 3D 프로젝트 생성
 
-TOAST를 이용한 설치
-=================================
+[방법 1] TOAST를 이용한 설치
+============================================
 
 1. Gamebase Setting Tool 패키지 다운로드
     - http://docs.toast.com/ko/Download/#game-gamebase
@@ -27,8 +27,8 @@ TOAST를 이용한 설치
       
 
 
-Unity Asset Store를 이용한 설치
-==================================
+[방법 2] Unity Asset Store를 이용한 설치
+============================================
 
 1. Asset Store 실행 **Menu > Window > Asset Store**
 
