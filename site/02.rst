@@ -8,43 +8,42 @@ Unity 프로젝트 생성
 1. Unity 실행
 2. ``GamebaseSettingTool`` 이름으로 새 3D 프로젝트 생성
 
-[방법 1] TOAST를 이용한 설치
+[방법 1] NHN Cloud를 이용한 설치
 ============================================
 
-1. Gamebase Setting Tool 패키지 다운로드
-    - http://docs.toast.com/ko/Download/#game-gamebase
+1. Setting Tool 패키지 다운로드
+
+  * http://docs.toast.com/ko/Download/#game-gamebase
 
     .. image:: _static/image/download_settingtool.png
 
 2. 패키지 임포트
-    - **Menu > Assets > Import Package > Custom Package**
 
-      .. image:: _static/image/menu-importpackage.png
+  * **Menu > Assets > Import Package > Custom Package**
 
-    - GamebaseSettingTool_vx.x.x.unitypackage 선택
-    - Click **Import**
-      
-      
+    .. image:: _static/image/menu-importpackage.png
 
-
+  * 다운로드한 GamebaseSettingTool_vx.x.x.unitypackage 선택
+  * Click **Import**
+ 
 [방법 2] Unity Asset Store를 이용한 설치
 ============================================
 
-1. Asset Store 실행 **Menu > Window > Asset Store**
+1. Asset Store 실행 
+
+  * **Menu > Window > Asset Store**
 
     .. image:: _static/image/menu-assetstore.png
-        :scale: 70%
 
-2. 검색창엡 이용해서 **Gamebase Setting Tool** 입력해서 Setting Tool 검색
+2. 검색창에 **Gamebase Setting Tool** 을 검색
 
-    .. image:: _static/image/assetstore-settingtool.png
-        :scale: 50%
+  .. image:: _static/image/assetstore-settingtool.png
         
 3. Click **Download**
 
   .. tip:: 
 
-    - 최초 다운로드인 경우에만 노출
+    * 최초 다운로드인 경우에만 노출
 
 4. Click **Import**
 

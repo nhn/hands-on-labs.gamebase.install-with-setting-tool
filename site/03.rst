@@ -2,28 +2,28 @@
 SDK 다운로드
 #######################
 
-Setting Tool을 통해서 Gamebase SDK를 다운로드합니다.
+Setting Tool을 이용하여 Gamebase SDK를 다운로드합니다.
 
 Setting Tool 실행
 =======================
 
-* **Menu > Tools > TOAST > Gamebase > Setting Tool > Settings**
+**Menu > Tools > NhnCloud > Gamebase > SettingTool > Settings**
 
 .. image:: _static/image/unity-menu-settingtool.png
 
 Gamebase SDK 다운로드
 =======================
 
-* Click **Download SDK**
+Click **Download SDK**
 
 .. image:: _static/image/settingtool-downloadsdk.png
 
 Gamebase SDK 확인
 =======================
 
-* {PROJECT PATH}/GamebaseSDK
+{PROJECT PATH}/GamebaseSDK
 
-  .. image:: _static/image/gamebase_sdk_explorer.png
+.. image:: _static/image/gamebase_sdk_explorer.png
 
 
 

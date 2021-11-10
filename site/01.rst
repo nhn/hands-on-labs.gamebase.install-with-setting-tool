@@ -4,7 +4,7 @@
 
 Gamebase SDK를 쉽게 설치할 수 있도록 Setting Tool을 제공하고 있습니다.
 
-이 코드 랩에서는 Setting Tool을 이용하는 방법에 대해서 설명 드릴 겁니다.
+이 코드 랩에서는 Setting Tool 이용 방법을 알아봅니다.
 
 학습할 내용
 ============
@@ -22,17 +22,6 @@ Gamebase SDK를 쉽게 설치할 수 있도록 Setting Tool을 제공하고 있�
 
   * `Unity 회원가입 <https://unity3d.com>`_
 
-* Unity 5.6.6 이상
+* Unity 2018.4.0 이상
 
-  * `Unity 다운로드 <https://unity3d.com/get-unity/download>`_
-
-참고 영상
-============
-
-.. raw:: html
-    
-    <iframe src="https://www.youtube.com/embed/kZ3Z1Kfr7Zw" frameborder="0" allowfullscreen="" wmode="Opaque" allow="encrypted-media" style="
-    margin: auto;
-    position: relative;
-    width: 560px;
-    height: 315px;"></iframe>
+  * `Unity 다운로드 <https://unity3d.com/get-unity/download/archive>`_

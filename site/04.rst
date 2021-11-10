@@ -2,7 +2,7 @@
 SDK 설치
 ###################
 
-Setting Tool을 통해서 Gamebase SDK를 설치합니다.
+Setting Tool을 이용하여 Gamebase SDK를 설치합니다.
 
 플랫폼 선택
 =============
@@ -10,7 +10,6 @@ Setting Tool을 통해서 Gamebase SDK를 설치합니다.
 Gamebase SDK를 적용할 플랫폼을 선택합니다.
 
 1. Android 
-
 2. iOS
 
 모듈 선택
@@ -18,26 +17,92 @@ Gamebase SDK를 적용할 플랫폼을 선택합니다.
 
 Gamebase SDK에서 사용하고자 하는 모듈을 선택합니다.
 
-1. Authentication
-    - Google과 같은 ID Provider(IdP)와의 연동을 지원합니다.
+* Authentication
 
-2. Push
-    - FCM(Firebase), Tencent, APNS Push 등의 서비스를 지원합니다.
+  * Google과 같은 ID Provider(IdP)와의 연동을 지원합니다.
 
-3. Purchase
-    - TOAST 결제 서비스인 IAP(In-App Purchase)를 사용하여 결제를 지원합니다.
+* Push
+
+  * FCM(Firebase), Tencent, APNS Push 등의 서비스를 지원합니다.
+
+* Purchase
+
+  * NHN Cloud 결제 서비스인 IAP(In-App Purchase)를 사용하여 결제를 지원합니다.
 
 설치
 ===========
 
-원하는 플랫폼과 모듈을 선택했으면 Gamebase SDK를 설치합니다.
+1. 원하는 플랫폼과 모듈을 선택했으면 Gamebase SDK를 설치합니다.
 
-가이드에서는 Android Platform, Google IdP, FCM을 선택하도록 하겠습니다.
+  * 가이드에서는 Android Platform 활성화 후 Android 탭을 선택하고, Google(authentication), IapGoogle(purchase), FCM(push)을 선택하도록 하겠습니다.
 
-.. image:: _static/image/settingtool-setting.png
-    :scale: 50%
+    .. image:: _static/image/settingtool-setting.png
 
-* Click **Settings**
-* 설치 완료 후에는 Gamebase 폴더를 확인할 수 있습니다.
+2. Click **Settings**
 
-.. image:: _static/image/setting-complete.png
+3. EDM4U 패키지 다운로드
+
+  * Link 항목에서 EDM4U Github 버튼을 클릭하여 EDM4U Github로 이동 후, external-dependency-manager-latest.unitypackage를 다운로드 합니다.
+
+    .. image:: _static/image/edm4u_link.png
+
+4. 패키지 임포트
+
+  * **Menu > Assets > Import Package > Custom Package**
+
+    .. image:: _static/image/menu-importpackage.png
+
+  * external-dependency-manager-latest.unitypackage 선택    
+  * Click **Import**
+
+5. Custom Gradle Template 활성화
+
+  * **Menu > File > Build Settings**
+
+    .. image:: _static/image/unity-menu-build-settings.png
+
+  * Andorid 플랫폼 선택    
+  * Click **Switch Platform**
+  * Enable Android Auto-resolution 창이 열리면 Desable 선택
+
+    .. image:: _static/image/edm4u_auto_resolution.png
+
+  * Click **Player Settings**
+
+    .. image:: _static/image/unity-build-settings.png
+
+  * Publishing Settings 에서 Custom Gradle Template 활성화
+
+    .. image:: _static/image/unity-custom-gradle-template.png
+
+6. EDM4U Android Resolver Settings
+
+  * **Menu > Assets > External Dependency Manager > Android Resolver > Settings**
+
+    .. image:: _static/image/unity-menu-android-resolver-settings.png
+
+  * Enable Auto-Resolution: 비활성화
+  * Explode AARs: 비활성화
+  * Patch mainTemplate.gradle: 활성화
+  * Use Jetifier: 활성화
+
+    .. image:: _static/image/edm4u_android_resolver_settings.png
+
+7. EDM4U Android Resolve
+
+  * **Menu > Assets > External Dependency Manager > Android Resolver > Resolve**
+
+    .. image:: _static/image/unity-menu-android-resolver-resolve.png
+
+  * 설치 완료 후에는 Gamebase 관련 폴더와 EDM4U를 사용하여 **Assets > Plugins > Android** mainTemplate.gradle 파일에 설정한 코드를 확인할 수 있습니다.
+
+    .. image:: _static/image/setting-complete.png
+
+    .. code-block:: XML
+  
+      // Android Resolver Dependencies Start
+          implementation 'com.toast.android.gamebase:gamebase-adapter-auth-google:2.29.0' // Assets/NhnCloud/GamebaseTools/SettingTool/Editor/gamebaseAllDependencies.xml:5
+          implementation 'com.toast.android.gamebase:gamebase-adapter-purchase-google:2.29.0' // Assets/NhnCloud/GamebaseTools/SettingTool/Editor/gamebaseAllDependencies.xml:6
+          implementation 'com.toast.android.gamebase:gamebase-adapter-push-fcm:2.29.0' // Assets/NhnCloud/GamebaseTools/SettingTool/Editor/gamebaseAllDependencies.xml:7
+          implementation 'com.toast.android.gamebase:gamebase-sdk:2.29.0' // Assets/NhnCloud/GamebaseTools/SettingTool/Editor/gamebaseAllDependencies.xml:4
+      // Android Resolver Dependencies End
