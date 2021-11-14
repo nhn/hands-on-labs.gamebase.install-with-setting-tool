@@ -2,21 +2,17 @@
 개요
 ****
 
-Gamebase SDK를 쉽게 설치할 수 있도록 Setting Tool을 제공하고 있습니다.
+Gamebase는 SDK를 쉽게 관리할 수 있도록 Setting Tool을 제공합니다.
 
-이 코드 랩에서는 Setting Tool 이용 방법을 알아봅니다.
+이제는 더 이상 SDK를 설치하느라 시간 낭비하지 마세요!
 
 학습할 내용
-============
+===============================
 
-* Setting Tool 설치
-* Setting Tool을 이용해서 Gamebase SDK 다운로드
-* Setting Tool을 이용해서 Gamebase SDK 설치
-* Settign Tool을 이용해서 Gamebase SDK 삭제
-* Setting Tool 업데이트
+Setting Tool 설치와 이용 방법을 알아봅니다.
 
 준비물
-===========
+===============================
 
 * Unity 계정
 
@@ -25,3 +21,6 @@ Gamebase SDK를 쉽게 설치할 수 있도록 Setting Tool을 제공하고 있�
 * Unity 2018.4.0 이상
 
   * `Unity 다운로드 <https://unity3d.com/get-unity/download/archive>`_
+  * Android Build Support 설치
+
+    .. image:: _static/image/unity_add_module.png

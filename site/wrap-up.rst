@@ -5,11 +5,9 @@
 학습한 내용
 =================
 
-* Setting Tool을 통해서 Unity 프로젝트에서 Gamebase SDK를 다운로드, 설치, 삭제하는 방법을 알아보았습니다.
-
+Setting Tool 설치와 이용 방법을 알아보았습니다.
 
 다음 단계
 =================
 
-* Unity 프로젝트에서 Gamebase SDK를 이용한 Guest 로그인
-
+`Android Guest 인증 </2021/hands-on-labs/gamebase.guest-auth-on-unity/>`_

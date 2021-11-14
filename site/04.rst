@@ -2,99 +2,120 @@
 SDK 설치
 ###################
 
-Setting Tool을 이용하여 Gamebase SDK를 설치합니다.
+Setting Tool 설정
+======================
 
-플랫폼 선택
-=============
+1. Use Android Platform: 활성화
+2. 모듈 선택
 
-Gamebase SDK를 적용할 플랫폼을 선택합니다.
+  * authentication: Google
+  * purchase: IapGoogle
+  * push: FCM
 
-1. Android 
-2. iOS
+3. Click **Settings**
 
-모듈 선택
-============
+  .. image:: _static/image/settingtool-setting.png
 
-Gamebase SDK에서 사용하고자 하는 모듈을 선택합니다.
+EDM4U 다운로드
+======================
 
-* Authentication
+1. Click **- EDM4U Github**
 
-  * Google과 같은 ID Provider(IdP)와의 연동을 지원합니다.
+  .. image:: _static/image/edm4u_link.png
 
-* Push
+2. external-dependency-manager-latest.unitypackage 다운로드
 
-  * FCM(Firebase), Tencent, APNS Push 등의 서비스를 지원합니다.
+  .. image:: _static/image/edm4u_unitypackage.png
 
-* Purchase
-
-  * NHN Cloud 결제 서비스인 IAP(In-App Purchase)를 사용하여 결제를 지원합니다.
-
-설치
-===========
-
-1. 원하는 플랫폼과 모듈을 선택했으면 Gamebase SDK를 설치합니다.
-
-  * 가이드에서는 Android Platform 활성화 후 Android 탭을 선택하고, Google(authentication), IapGoogle(purchase), FCM(push)을 선택하도록 하겠습니다.
-
-    .. image:: _static/image/settingtool-setting.png
-
-2. Click **Settings**
-
-3. EDM4U 패키지 다운로드
-
-  * Link 항목에서 EDM4U Github 버튼을 클릭하여 EDM4U Github로 이동 후, external-dependency-manager-latest.unitypackage를 다운로드 합니다.
-
-    .. image:: _static/image/edm4u_link.png
-
-4. 패키지 임포트
+3. Import Package
 
   * **Menu > Assets > Import Package > Custom Package**
 
     .. image:: _static/image/menu-importpackage.png
 
-  * external-dependency-manager-latest.unitypackage 선택    
-  * Click **Import**
+  * external-dependency-manager-latest.unitypackage 열기
 
-5. Custom Gradle Template 활성화
+mainTemplate.gradle 설정
+==========================
 
-  * **Menu > File > Build Settings**
+1. Custom Gradle Template 활성화
+
+  1. **Menu > File > Build Settings**
 
     .. image:: _static/image/unity-menu-build-settings.png
 
-  * Andorid 플랫폼 선택    
-  * Click **Switch Platform**
-  * Enable Android Auto-resolution 창이 열리면 Desable 선택
+  2. Andorid 플랫폼 선택    
+  3. Click **Switch Platform**
+  4. Enable Android Auto-resolution 창이 열리면 **Desable** 선택
 
     .. image:: _static/image/edm4u_auto_resolution.png
 
-  * Click **Player Settings**
+  5. Click **Player Settings**
 
     .. image:: _static/image/unity-build-settings.png
 
-  * Publishing Settings 에서 Custom Gradle Template 활성화
+  6. **Publishing Settings** 에서 Custom Gradle Template 활성화
 
     .. image:: _static/image/unity-custom-gradle-template.png
 
-6. EDM4U Android Resolver Settings
+  7. **Unity 2019.3 이상** 사용 시, Custom Gradle Properties Template 활성화
 
-  * **Menu > Assets > External Dependency Manager > Android Resolver > Settings**
+2. mainTemplate.gradle 수정
+
+  .. tip:: 
+    * 사용하고 계신 Unity 버전이 아래와 같다면, 해당 설정은 하지 않아도 됩니다.
+
+      * Unity 2018.4.4 이상
+      * Unity 2019.1.7 이상
+
+  1. **Assets > Plugins > Android** mainTemplate.gradle 파일 열기
+  2. 코드 추가
+
+    .. code-block::
+
+      exclude ('META-INF/proguard/coroutines.pro')
+
+    .. image:: _static/image/mainTemplate_proguard.png
+
+  3. 코드 추가
+
+    .. code-block::
+
+      ([rootProject] + (rootProject.subprojects as List)).each {
+    	  ext {
+    		  // >>> Fix for AGP under 3.4.0
+    		  it.setProperty("android.enableD8.desugaring", true)
+    		  it.setProperty("android.enableIncrementalDesugaring", false)
+    	  }
+      }
+
+    .. image:: _static/image/mainTemplate_desugaring.png
+
+EDM4U 설정
+======================
+
+1. EDM4U Android Resolver Settings
+
+  1. **Menu > Assets > External Dependency Manager > Android Resolver > Settings**
 
     .. image:: _static/image/unity-menu-android-resolver-settings.png
 
-  * Enable Auto-Resolution: 비활성화
-  * Explode AARs: 비활성화
-  * Patch mainTemplate.gradle: 활성화
-  * Use Jetifier: 활성화
+  2. 설정 변경
+  
+    * Enable Auto-Resolution: 비활성화
+    * Explode AARs: 비활성화
+    * Patch mainTemplate.gradle: 활성화
+    * Use Jetifier: 활성화
 
     .. image:: _static/image/edm4u_android_resolver_settings.png
 
-7. EDM4U Android Resolve
+2. EDM4U Android Resolve
 
   * **Menu > Assets > External Dependency Manager > Android Resolver > Resolve**
 
     .. image:: _static/image/unity-menu-android-resolver-resolve.png
 
-  * 설치 완료 후에는 Gamebase 관련 폴더와 EDM4U를 사용하여 **Assets > Plugins > Android** mainTemplate.gradle 파일에 설정한 코드를 확인할 수 있습니다.
+  * 설정 완료 후에는 Gamebase 관련 폴더와 EDM4U를 사용하여 **Assets > Plugins > Android** mainTemplate.gradle 파일에 설정한 코드를 확인할 수 있습니다.
 
     .. image:: _static/image/setting-complete.png
 
