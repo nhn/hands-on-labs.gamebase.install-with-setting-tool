@@ -23,7 +23,7 @@ EDM4U 다운로드
 
   .. image:: _static/image/edm4u_link.png
 
-2. external-dependency-manager-latest.unitypackage 다운로드
+2. **external-dependency-manager-latest.unitypackage** 다운로드
 
   .. image:: _static/image/edm4u_unitypackage.png
 

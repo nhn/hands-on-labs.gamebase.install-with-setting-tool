@@ -36,15 +36,15 @@ Unity 프로젝트 생성
 
 2. 검색창에 **Gamebase Setting Tool** 을 검색
 
-  .. image:: _static/image/assetstore-settingtool.png
-        
+  .. image:: _static/image/unity-asset-store-search.png
+
 3. Click **Download**
 
-  .. tip:: 
-
-    * 최초 다운로드인 경우에만 노출
+  .. image:: _static/image/unity-asset-store-download.png
 
 4. Click **Import**
+
+  .. image:: _static/image/unity-asset-store-import.png
 
 
 
